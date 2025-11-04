@@ -1,17 +1,11 @@
 {
   "name": "MFA Codespace",
   "image": "mmcauliffe/montreal-forced-aligner:latest",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached"
   ],
-  "forwardPorts": [],
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": []
-    }
   }
 }
